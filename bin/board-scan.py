@@ -31,6 +31,7 @@ nothing here is hardcoded — rename the repo and it follows.
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import shutil
 import subprocess  # noqa: F401  (kept for convenience when adding workflow steps)
@@ -60,9 +61,10 @@ def _command_source() -> Path:
 # ---------- the workflow ----------
 
 HOME = Path.home()
-WORKSPACE = HOME / "ws01"
+WORKSPACE = Path(os.environ.get("BOARD_SCAN_WORKSPACE", HOME / "workspace")).expanduser()
 BOARD = WORKSPACE / "docs" / "BOARD.md"
-MEMORY = HOME / ".claude" / "projects" / "-home-user-ws01" / "memory"
+# Claude Code names a project folder after its path, "/" -> "-"
+MEMORY = HOME / ".claude" / "projects" / str(WORKSPACE).replace("/", "-") / "memory"
 PLANS = HOME / ".claude" / "plans"
 CUTOFF = datetime(2026, 9, 29)  # release A; older plans are history unless --all
 
@@ -84,7 +86,7 @@ def sources(include_all: bool) -> list[Path]:
     files += sorted(PLANS.glob("*.md"))
     files += sorted(p for p in MEMORY.glob("*.md") if p.name != "MEMORY.md")
     files += sorted(p for p in (WORKSPACE / "docs").glob("*.md") if p != BOARD)
-    for repo in sorted((WORKSPACE / "project").iterdir()):
+    for repo in sorted((WORKSPACE / "project").glob("*")):
         if repo.name == "worktree" or not repo.is_dir():
             continue
         files += sorted((repo / "docs").glob("*.md"))

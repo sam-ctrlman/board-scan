@@ -1,6 +1,8 @@
 # board-scan
 
-List **open topics and open decisions** that live outside `~/ws01/docs/BOARD.md`. Read-only.
+List **open topics and open decisions** that live outside `<workspace>/docs/BOARD.md`. Read-only.
+
+`<workspace>` = `$BOARD_SCAN_WORKSPACE` (default `~/workspace`).
 
 ## Why
 Open items were spread over 50+ plans, review-run ledgers, memory and repo docs, so a decision could sit forgotten in an old plan. `board-scan` collects them; `--new` shows only what the board doesn't cite yet.
@@ -25,7 +27,7 @@ After install, `board-scan` works in any shell and `/board-scan` works in Claude
 | `board-scan uninstall` | Remove both symlinks |
 
 ## What it reads
-`~/.claude/plans/*.md`, workspace memory `*.md` (not MEMORY.md), `~/ws01/docs/*.md` (not BOARD.md), and each repo's `docs/*.md` and `.claude/*.md` under `~/ws01/project/`.
+`~/.claude/plans/*.md`, workspace memory `*.md` (not MEMORY.md), `<workspace>/docs/*.md` (not BOARD.md), and each repo's `docs/*.md` and `.claude/*.md` under `<workspace>/project/`.
 
 ## What counts as open
 | Kind | Marker |

@@ -10,7 +10,7 @@ Run `board-scan $ARGUMENTS` from the user's current directory using the Bash too
 Actions:
 
 - **`board-scan`** — open items from recent sources, grouped DECISIONS / TOPICS, as `file:line  text`.
-- **`board-scan --new`** — only items whose `<file>:<line>` is not cited on `~/ws01/docs/BOARD.md`.
+- **`board-scan --new`** — only items whose `<file>:<line>` is not cited on `<workspace>/docs/BOARD.md` (`$BOARD_SCAN_WORKSPACE`, default `~/workspace`).
 - **`board-scan --all`** — also plans older than release A and DONE plans.
 - **`board-scan install`** — create both symlinks (bin + Claude command). Idempotent.
 - **`board-scan uninstall`** — remove both symlinks. Idempotent.
