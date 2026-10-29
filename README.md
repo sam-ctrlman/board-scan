@@ -10,8 +10,8 @@ Open items were spread over 50+ plans, review-run ledgers, memory and repo docs,
 ## Install
 
 ```sh
-git clone <remote-url> ~/scripts/board-scan
-python3 ~/scripts/board-scan/bin/board-scan.py install
+git clone <remote-url> ~/tools/projects/board-scan
+python3 ~/tools/projects/board-scan/bin/board-scan.py install
 ```
 
 After install, `board-scan` works in any shell and `/board-scan` works in Claude Code.
@@ -44,7 +44,7 @@ Line numbers move when a file is edited, so re-run `--new` after editing a sourc
 ## Layout
 
 ```
-~/scripts/board-scan/
+~/tools/projects/board-scan/
 ├── README.md
 ├── bin/board-scan.py
 └── commands/board-scan.md

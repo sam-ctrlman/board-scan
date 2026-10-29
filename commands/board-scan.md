@@ -5,7 +5,7 @@ argument-hint: "[--new] [--all] [run|install|uninstall]"
 
 Run `board-scan $ARGUMENTS` from the user's current directory using the Bash tool.
 
-`board-scan` is a Python tool at `~/scripts/board-scan/bin/board-scan.py` (symlinked to `~/.local/bin/board-scan`). This slash command file is at `~/scripts/board-scan/commands/board-scan.md` (symlinked to `~/.claude/commands/board-scan.md`).
+`board-scan` is a Python tool at `~/tools/projects/board-scan/bin/board-scan.py` (symlinked to `~/.local/bin/board-scan`). This slash command file is at `~/tools/projects/board-scan/commands/board-scan.md` (symlinked to `~/.claude/commands/board-scan.md`).
 
 Actions:
 
