@@ -47,5 +47,5 @@ Line numbers move when a file is edited, so re-run `--new` after editing a sourc
 ~/tools/projects/board-scan/
 ├── README.md
 ├── bin/board-scan.py
-└── commands/board-scan.md
+└── skills/board-scan/SKILL.md
 ```
