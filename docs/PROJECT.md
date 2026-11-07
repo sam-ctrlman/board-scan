@@ -3,7 +3,7 @@
 <!-- created by /memlayout 2026-10-30 · board prefix TOOL-BSCAN · workspace tools -->
 
 ## Goal
-Lists open topics (`OPEN:`) and open decisions (`DECIDE:`) from plans, memory and docs that are not on the workspace board yet. Read-only.
+Read-only CLI & Claude Code skill to scan Markdown plans, docs, and AI memory for untracked open decisions (`DECIDE:`) and tasks (`OPEN:`).
 
 ## Users
 A developer who runs Claude Code on their own machine and wants this step done the same way every time.
